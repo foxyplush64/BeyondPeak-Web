@@ -1,7 +1,4 @@
-<!DOCTYPE HTML>
-<html lang="en">
-<body>
-<p1>function search(p: player):
+function search(p: player):
 	if size of {searchingSessions::*} is greater than 0:
 		loop {searchingSessions::*}:
 			if size of {Cas.%loop-value%::*} = 2:
@@ -139,5 +136,3 @@ command duels:
     set metadata tag "skl.Duels.Main" of player to chest inventory with 3 rows named "Duels"
     set slot 11 of metadata tag "skl.Duels.Main" of player to diamond sword
     open (metadata tag "skl.Duels.Main" of player) to player</p1>
-</body>
-</html>
