@@ -6,3 +6,9 @@ RewriteRule ^ /%1 [NC,L,R]
 
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^ %{REQUEST_URI}.html [NC,L]
+
+RewriteCond %{THE_REQUEST} /([^.]+)\.txt [NC]
+RewriteRule ^ /%1 [NC,L,R]
+
+RewriteCond %{REQUEST_FILENAME}.txt -f
+RewriteRule ^ %{REQUEST_URI}.txt [NC,L]
