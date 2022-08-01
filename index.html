@@ -1,29 +1,55 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>fp64 File Storage</title>
-    <link rel="icon" sizes="192x192" href="/favicon.png">
-    <style>
-      .img1 {
-        width: 100px;
-        border-radius: 10px;
-        float: left;
-        margin-right: 10px;
-      }
-    </style>
-  </head>
-  <body>
-    <a href="/images/sacha.png">
-      <img class="img1"
-        src="/images/sacha.png"
-        alt="Sacha's profile picture"
-      />
-    </a>
-    <a href="/images/Snowyy0.jpg">
-      <img class="img1"
-        src="/images/Snowyy0.jpg"
-        alt="Snowyy0's profile picture"
-      />
-    </a>
-  </body>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatable" content="ie=edge">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" sizes="192x192" href="favicon.png">
+    </head>
+    <body style="background-color: rgba(60,60,60);">
+        <section style="height: 18vh;"></section>
+        <section class="background" style="background-color: rgba(60,60,60);">
+            <!--<img src="background.jpg" class="parallax"> -->
+            <div class="text-wrapper">
+                <h1 class="headline">fp64</h1>
+                <h2 class="sub-headline">File Storage</h2>
+                <p1 id="tellscroll" style="font-size: 2vh;">\/ Scroll \/</p1>
+                <p1 id="ots" style="font-size: 2vh; color: #3c3c3c; display: none;">.</p1>
+            </div>
+        </section>
+        <section style="height: 50vh;"></section>
+        <h1 style="font-size: 10vh;" id="images">
+            <center>Images</center>
+        </h1>
+        <center><a href="/images/sacha.jpg"><img src="/images/sacha.jpg" class="img1"></a><a href="/images/Snowyy0.jpg"><img src="/images/Snowyy0.jpg" class="img1"></a></center>
+
+        <section style="height: 75vh;"></section>
+        <h1 style="font-size: 10vh;" id="scripts">
+            <center>Scripts / Archives</center>
+        </h1>
+        <center>
+            <a href="/index.html#scripts"><button style="height: 3vh; width: 5vh; border-radius: 15vh; border-width: 0.3vh; font-size: 1.5vh;">Duels</button></a>
+        </center>
+        <section style="height: 75vh;"></section>
+        <script>
+            window.addEventListener('scroll', function(){
+                const parallax = document.querySelector('.parallax');
+                let scrollPosition = window.pageYOffset;
+
+                // parallax.style.transform = 'translateY(' + scrollPosition * 0.5 + 'px)';
+                
+                if (window.pageYOffset <= 1){
+                    document.getElementById('tellscroll').style.display = 'block'
+                    document.getElementById('ots').style.display = 'none'
+                }
+
+                else {
+                    document.getElementById('tellscroll').style.display = 'none'
+                    document.getElementById('ots').style.display = 'block'
+                };
+            });
+        </script>
+    </body>
 </html>
